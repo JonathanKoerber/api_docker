@@ -1,6 +1,14 @@
 from flask import Flask
 import requests
 
+config = {
+        'user': 'root',
+        'password': 'root',
+        'host': 'db',
+        'port': '3306',
+        'database': 'knights'
+        }
+connection = mysql.connector.connect(**config)
 app = Flask(__name__)
 
 API_KEY = "e3d3c1974bb9c567f00c9b9ba1e17698"
